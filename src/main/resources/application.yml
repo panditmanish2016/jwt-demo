@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: root
+    password: root1994
+    url: jdbc:mysql://localhost:3306/springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect  
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file:  
+    name: C:/Users/MANISH/Downloads/school-ballia/rsas-service/JwtDemoLog.log
+  level: 
+    root: info
+    org.springframework.web: error
+    com.jwt.demo: trace
+server:
+  servlet:
+    context-path: /jwt-demo            
+          
